@@ -1,0 +1,23 @@
+{
+  "name": "humanize-ai-embed",
+  "version": "1.0.0",
+  "description": "Your Trained AI ChatBot Embedding for your React Applications",
+  "main": "BotEmbed.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "humanizeai",
+    "humanize",
+    "'humanizeai",
+    "chatbot'",
+    "'humanize",
+    "chatbot'"
+  ],
+  "author": "Humanize AI",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-icons": "^4.11.0"
+  }
+}
