@@ -1,11 +1,17 @@
 {
   "name": "humanize-ai-embed",
-  "version": "1.0.0",
+  "version": "3.5.5",
   "description": "Your Trained AI ChatBot Embedding for your React Applications",
-  "main": "BotEmbed.tsx",
+  "main": "dist/BotEmbed.tsx",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "start": "rollup -c -w"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "humanizeai",
     "humanize",
@@ -19,5 +25,21 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-icons": "^4.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.29.4",
+    "rollup-plugin-sass": "^1.12.20",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-image": "^1.0.2"
   }
 }

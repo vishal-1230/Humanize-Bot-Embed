@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import botIcon from './boticon.png'
+// import botIcon from './boticon.png'
 import {BsRobot} from "react-icons/bs"
 import {AiFillCloseCircle} from "react-icons/ai"
 import {TbSend} from "react-icons/tb"
@@ -10,9 +10,8 @@ function BotEmbed(props: BotProps) {
     const [showChatBox, setShowChatBox] = React.useState<boolean>(false)
 
     const [title, setTitle] = React.useState<string>(props.title)
-    const [profileImage, setProfileImage] = React.useState<string>(botIcon)
+    const [profileImage, setProfileImage] = React.useState<string>(require("./boticon.png").default)
     const [description, setDescription] = React.useState<string>("")
-    const [color, setColor] = React.useState<string>(colors[props?.theme]?.primary)
 
     const [message, setMessage] = React.useState<string>("")
 
@@ -76,7 +75,7 @@ function BotEmbed(props: BotProps) {
         tempChats.push({message: "Loading...", sender: "bot"})
         console.log("Temp chats", tempChats)
         setChatsUpdater(message)
-        const oldLength = tempChats.length
+        // const oldLength = tempChats.length
         console.log("New chats", chats)
     }
     useEffect(()=>{
@@ -95,7 +94,7 @@ function BotEmbed(props: BotProps) {
         try {
               let source = new EventSource(url, {withCredentials: false})
         
-              source.addEventListener("open", (e: any) => {
+              source.addEventListener("open", () => {
                 console.log("Connection opened")
               })
         
@@ -329,15 +328,17 @@ function BotEmbed(props: BotProps) {
                 <span style={{
                     fontWeight: "bold",
                     fontSize: "16px",
+                    padding: "10px",
                 }}>
                     <TbSend style={{
                         cursor: "pointer",
                         width: "20px",
+                        minWidth: "16px",
                         height: "20px",
+                        minHeight: "16px",
                         backgroundColor: colors[props?.theme]?.primary,
                         color: colors[props?.theme]?.secondary,
                         borderRadius: "50%",
-                        padding: "10px",
                     }} onClick={sendMessage} />
                 </span>
             </div>
